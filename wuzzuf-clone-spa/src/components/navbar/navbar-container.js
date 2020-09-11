@@ -1,16 +1,21 @@
 import React, {Component} from 'react'
-import NavbarView from './navbar-view'
+import { MainNavbarView, LoggedInNavbarView } from './navbar-view'
 
 class Navbar extends Component{
     state= {
-        test: `"Props Navbar"`
+        authenticated: false,
     }
+
     render() {
-        return (
-            <div>
-                <NavbarView number= {this.state.test}/>
-            </div>
-        );
+        if(!this.state.authenticated) {
+            return (
+                <MainNavbarView toggleLogin={this.toggleLogin} />
+            );
+        } else {
+            return (
+                <LoggedInNavbarView toggleLogin={this.toggleLogin} />
+            )
+        }
     }
 }
 export default Navbar

@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Navbar from './components/navbar/navbar-container';
 import Home from './components/home/home-container';
-import Form from './components/form/form-container';
-import Login from './components/form/login';
-import Register, {RegisterEmployer} from './components/form/register';
+import Login from './components/login/login-container';
+import Register from './components/register/register-container';
+
 import './style.css'
-import { BrowserRouter, Route, Switch, Redirect  } from 'react-router-dom';
 
 class App extends Component {
     render() {
@@ -15,8 +16,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Form} />
-                    <Route exact path="/RegisterEmployer" component={RegisterEmployer} />
+                    <Route exact path="/register" component={Register} />
                 </Switch>
             </BrowserRouter>
         );

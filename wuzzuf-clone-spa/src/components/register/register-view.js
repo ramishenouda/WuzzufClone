@@ -1,11 +1,10 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import './form-style.css'
-import Country from './countries'
 import {Container, Form, Button, Col} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-function RegisterEmployer(props) {
+import Country from './countries'
+import './register-style.css'
+
+function RegisterEmployerView(props) {
     return(
         <div>
             <Container>
@@ -15,21 +14,20 @@ function RegisterEmployer(props) {
                         <Form.Group as={Col} controlId="firstname">
                             <Form.Label> Name </Form.Label>
                             <Form.Control 
-                            placeholder="First name" 
-                            name="firstName"
-                            value={props.registerInfo.firstName}
-                            
-                            onChange={props.handleChange}
+                                placeholder="First name" 
+                                name="firstName"
+                                value={props.registerInfo.firstName}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="lastname">
                             <Form.Label>   </Form.Label>
                             <Form.Control 
-                            placeholder="Last name"
-                            name="lastName"
-                            value={props.registerInfo.lastName}
-                            onChange={props.handleChange}
+                                placeholder="Last name"
+                                name="lastName"
+                                value={props.registerInfo.lastName}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
                     </Form.Row>
@@ -38,22 +36,22 @@ function RegisterEmployer(props) {
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
                             <Form.Control 
-                            type="email" 
-                            placeholder="Enter email" 
-                            name="email"
-                            value={props.registerInfo.email}
-                            onChange={props.handleChange}
+                                type="email" 
+                                placeholder="Enter email" 
+                                name="email"
+                                value={props.registerInfo.email}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPassword">
                             <Form.Label>Password</Form.Label>
                             <Form.Control 
-                            type="password" 
-                            placeholder="Password" 
-                            name="password"
-                            value={props.registerInfo.password}
-                            onChange={props.handleChange}
+                                type="password" 
+                                placeholder="Password" 
+                                name="password"
+                                value={props.registerInfo.password}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
                     </Form.Row>
@@ -62,30 +60,30 @@ function RegisterEmployer(props) {
                         <Form.Group as={Col} controlId="companyName">
                             <Form.Label>Company Name</Form.Label>
                             <Form.Control 
-                            placeholder="Company Name" 
-                            name="companyName"
-                            value={props.registerInfo.companyName}
-                            onChange={props.handleChange}
+                                placeholder="Company Name" 
+                                name="companyName"
+                                value={props.registerInfo.companyName}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="companyPhone">
                             <Form.Label>Company Phone</Form.Label>
                             <Form.Control 
-                            placeholder="Company Phone" 
-                            name="companyPhone"
-                            value={props.registerInfo.companyPhone}
-                            onChange={props.handleChange}
+                                placeholder="Company Phone" 
+                                name="companyPhone"
+                                value={props.registerInfo.companyPhone}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="companySize">
                             <Form.Label>Company Size</Form.Label>
                             <Form.Control 
-                            as="select" 
-                            name="companySize"
-                            value={props.registerInfo.companySize}
-                            onChange={props.handleChange}
+                                as="select" 
+                                name="companySize"
+                                value={props.registerInfo.companySize}
+                                onChange={props.handleChange}
                             >
                                 <option>Choose a company size</option>
                                 <option>1-10 employees</option>
@@ -108,22 +106,25 @@ function RegisterEmployer(props) {
                         </Form.Group>
                         <Form.Group as={Col} controlId="companyCountry"> 
                             <Country 
-                            value={props.registerInfo.country}
-                            handleChange={props.handleChange}
+                                value={props.registerInfo.country}
+                                handleChange={props.handleChange}
                             />
                         </Form.Group>
                         <Form.Group as={Col} controlId="adress">
                             <Form.Label>Address</Form.Label>
                             <Form.Control 
-                            placeholder="1234 Main St" 
-                            name="adress"
-                            value={props.registerInfo.adress}
-                            onChange={props.handleChange}
+                                placeholder="1234 Main St" 
+                                name="adress"
+                                value={props.registerInfo.adress}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
                     </Form.Row>
                     <Button variant="success" type="submit">
                         Join WUZZUF as a Company
+                    </Button>
+                    <Button className="ml-1" onClick={props.toggleEmployer} variant="secondary">
+                        Back
                     </Button>
                 </Form>
             </Container>
@@ -131,7 +132,7 @@ function RegisterEmployer(props) {
     )
 }
 
-function Register(props) {
+function RegisterView(props) {
     return (
         <div>
             <Container>
@@ -141,20 +142,20 @@ function Register(props) {
                         <Form.Group as={Col} controlId="firstname">
                             <Form.Label> Name </Form.Label>
                             <Form.Control 
-                            placeholder="First name" 
-                            name="firstName"
-                            value={props.registerInfo.firstName}
-                            onChange={props.handleChange}
+                                placeholder="First name" 
+                                name="firstName"
+                                value={props.registerInfo.firstName}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="lastname" >
                             <Form.Label>   </Form.Label>
                             <Form.Control 
-                            placeholder="Last name" 
-                            name="lastName" 
-                            value={props.registerInfo.lastName}
-                            onChange={props.handleChange}
+                                placeholder="Last name" 
+                                name="lastName" 
+                                value={props.registerInfo.lastName}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
                     </Form.Row>
@@ -163,22 +164,22 @@ function Register(props) {
                         <Form.Group as={Col} controlId="email" >
                             <Form.Label>Email</Form.Label>
                             <Form.Control 
-                            type="email" 
-                            placeholder="Enter email" 
-                            name="email"
-                            value={props.registerInfo.email}
-                            onChange={props.handleChange}
+                                type="email" 
+                                placeholder="Enter email" 
+                                name="email"
+                                value={props.registerInfo.email}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="password" >
                             <Form.Label>Password</Form.Label>
                             <Form.Control 
-                            type="password" 
-                            placeholder="Password" 
-                            name="password"
-                            value={props.registerInfo.password}
-                            onChange={props.handleChange}
+                                type="password" 
+                                placeholder="Password" 
+                                name="password"
+                                value={props.registerInfo.password}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
                     </Form.Row>
@@ -187,27 +188,27 @@ function Register(props) {
                         <Form.Group as={Col} controlId="adress">
                             <Form.Label>Address</Form.Label>
                             <Form.Control 
-                            placeholder="1234 Main St" 
-                            name="adress"
-                            value={props.registerInfo.adress}
-                            onChange={props.handleChange}
+                                placeholder="1234 Main St" 
+                                name="adress"
+                                value={props.registerInfo.adress}
+                                onChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridCountry">
                             <Country 
-                            value={props.registerInfo.country}
-                            handleChange={props.handleChange}
+                                value={props.registerInfo.country}
+                                handleChange={props.handleChange}
                             />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridState">
                             <Form.Label>Career</Form.Label>
                             <Form.Control 
-                            as="select" 
-                            name="career"
-                            value={props.registerInfo.career}
-                            onChange={props.handleChange}
+                                as="select" 
+                                name="career"
+                                value={props.registerInfo.career}
+                                onChange={props.handleChange}
                             >
                                 <option>Choose...</option>
                                 <option>Software engineer</option>
@@ -222,17 +223,13 @@ function Register(props) {
                     <Button variant="secondary" type="submit">
                         Register
                     </Button>{' '}
-                    <Link to="/RegisterEmployer">
-                        <Button variant="success">
-                            Employer?
-                        </Button>
-                    </Link>
+                    <Button onClick={props.toggleEmployer} variant="success">
+                        Employer?
+                    </Button>
                 </Form>
             </Container>
         </div>
     );
 }
-export default Register
-export {
-    RegisterEmployer
-}
+
+export { RegisterView, RegisterEmployerView }

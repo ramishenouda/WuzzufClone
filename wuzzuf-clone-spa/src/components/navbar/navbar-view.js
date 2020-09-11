@@ -1,9 +1,10 @@
 import React from 'react'
-import './navbar-style.css'
 import { Container, Navbar, Nav, Dropdown, DropdownButton } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from 'react-router-dom';
-function mainNavbar() {
+
+import './navbar-style.css'
+
+function MainNavbarView() {
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -12,7 +13,7 @@ function mainNavbar() {
                     <Nav className="mr-auto">
                         <Link to="/jobs" className="link">Browse Jobs</Link>
                     </Nav>
-                    <Nav>{/*kan fe hena inline*/}
+                    <Nav>
                         <Link to="/login" className="link">Login</Link>
                         <Link to="/register" className="link">Join Now</Link>
                     </Nav>
@@ -22,7 +23,7 @@ function mainNavbar() {
     )
 }
 
-function loggedInNavbar() {
+function LoggedInNavbarView() {
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -46,7 +47,4 @@ function loggedInNavbar() {
     )
 }
 
-export default mainNavbar
-export {
-    loggedInNavbar
-}
+export { LoggedInNavbarView, MainNavbarView }

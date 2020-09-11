@@ -1,7 +1,9 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import {Container, Form, Button } from 'react-bootstrap';
-function login() {
+
+import './login-style.css'
+
+function Login(props) {
     return (
         <div className="login">
             <Container className="mt-5">
@@ -27,4 +29,5 @@ function login() {
         </div>
     );
 }
-export default login 
+
+export default Login
