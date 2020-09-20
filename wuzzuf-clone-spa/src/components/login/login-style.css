@@ -6,5 +6,11 @@
 }
 
 .login .form-control{
-    width: 120%;
+    width: 170%;
+}
+
+@media (max-width:600px) {
+    .login .form-control{
+        width: 150%;
+    }
 }

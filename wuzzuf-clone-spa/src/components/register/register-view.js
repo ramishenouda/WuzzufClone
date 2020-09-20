@@ -1,86 +1,96 @@
 import React from 'react';
-import {Container, Form, Button, Col} from 'react-bootstrap';
+import { Container, Form, Button, Col, Row } from 'react-bootstrap';
 
 import Country from './countries'
 import './register-style.css'
 
 function RegisterEmployerView(props) {
-    return(
-        <div>
-            <Container>
-                <Form className="mt-5">
-                    
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="firstname">
+    return (
+        <Container>
+            <Form className="mt-5">
+                <Row>
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label> Name </Form.Label>
-                            <Form.Control 
-                                placeholder="First name" 
+                            <Form.Control
+                                placeholder="First name"
                                 name="firstName"
                                 value={props.registerInfo.firstName}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="lastname">
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>   </Form.Label>
-                            <Form.Control 
+                            <Form.Control
                                 placeholder="Last name"
                                 name="lastName"
                                 value={props.registerInfo.lastName}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                    </Form.Row>
+                    </Col>
 
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="formGridEmail">
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group >
                             <Form.Label>Email</Form.Label>
-                            <Form.Control 
-                                type="email" 
-                                placeholder="Enter email" 
+                            <Form.Control
+                                type="email"
+                                placeholder="Enter email"
                                 name="email"
                                 value={props.registerInfo.email}
                                 onChange={props.handleChange}
                             />
+                            <Form.Text className="text-muted">
+                                We'll never share your email with anyone else.
+                            </Form.Text>
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="formGridPassword">
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Password</Form.Label>
-                            <Form.Control 
-                                type="password" 
-                                placeholder="Password" 
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
                                 name="password"
                                 value={props.registerInfo.password}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                    </Form.Row>
+                    </Col>
 
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="companyName">
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Company Name</Form.Label>
-                            <Form.Control 
-                                placeholder="Company Name" 
+                            <Form.Control
+                                placeholder="Company Name"
                                 name="companyName"
                                 value={props.registerInfo.companyName}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="companyPhone">
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Company Phone</Form.Label>
-                            <Form.Control 
-                                placeholder="Company Phone" 
+                            <Form.Control
+                                placeholder="Company Phone"
                                 name="companyPhone"
                                 value={props.registerInfo.companyPhone}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="companySize">
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Company Size</Form.Label>
-                            <Form.Control 
-                                as="select" 
+                            <Form.Control
+                                as="select"
                                 name="companySize"
                                 value={props.registerInfo.companySize}
                                 onChange={props.handleChange}
@@ -94,118 +104,136 @@ function RegisterEmployerView(props) {
                                 <option>More than 1000 employees</option>
                             </Form.Control>
                         </Form.Group>
-                    </Form.Row>
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="companyWebsite">
+                    </Col>
+
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label> Company Website </Form.Label>
-                            <Form.Control 
+                            <Form.Control
                                 name="companyWebsite"
                                 value={props.registerInfo.companyWebsite}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                        <Form.Group as={Col} controlId="companyCountry"> 
-                            <Country 
+                    </Col>
+
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
+                            <Country
                                 value={props.registerInfo.country}
                                 handleChange={props.handleChange}
                             />
                         </Form.Group>
-                        <Form.Group as={Col} controlId="adress">
+                    </Col>
+
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Address</Form.Label>
-                            <Form.Control 
-                                placeholder="1234 Main St" 
+                            <Form.Control
+                                placeholder="1234 Main St"
                                 name="adress"
                                 value={props.registerInfo.adress}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                    </Form.Row>
-                    <Button variant="success" type="submit">
-                        Join WUZZUF as a Company
+                    </Col>
+                </Row>
+
+                <Button variant="success" type="submit">
+                    Join WUZZUF as a Company
                     </Button>
-                    <Button className="ml-1" onClick={props.toggleEmployer} variant="secondary">
-                        Back
+                <Button className="ml-1" onClick={props.toggleEmployer} variant="secondary">
+                    Back
                     </Button>
-                </Form>
-            </Container>
-        </div>
+            </Form>
+        </Container>
     )
 }
 
 function RegisterView(props) {
     return (
-        <div>
-            <Container>
-                <Form className="mt-5">
-                    
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="firstname">
+        <Container>
+            <Form className="mt-5">
+                <Row>
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label> Name </Form.Label>
-                            <Form.Control 
-                                placeholder="First name" 
+                            <Form.Control
+                                placeholder="First name"
                                 name="firstName"
                                 value={props.registerInfo.firstName}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="lastname" >
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>   </Form.Label>
-                            <Form.Control 
-                                placeholder="Last name" 
-                                name="lastName" 
+                            <Form.Control
+                                placeholder="Last name"
+                                name="lastName"
                                 value={props.registerInfo.lastName}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                    </Form.Row>
+                    </Col>
 
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="email" >
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group >
                             <Form.Label>Email</Form.Label>
-                            <Form.Control 
-                                type="email" 
-                                placeholder="Enter email" 
+                            <Form.Control
+                                type="email"
+                                placeholder="Enter email"
                                 name="email"
                                 value={props.registerInfo.email}
                                 onChange={props.handleChange}
                             />
+                            <Form.Text className="text-muted">
+                                We'll never share your email with anyone else.
+                                </Form.Text>
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="password" >
+                    <Col lg="6" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Password</Form.Label>
-                            <Form.Control 
-                                type="password" 
-                                placeholder="Password" 
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
                                 name="password"
                                 value={props.registerInfo.password}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
-                    </Form.Row>
+                    </Col>
 
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="adress">
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Address</Form.Label>
-                            <Form.Control 
-                                placeholder="1234 Main St" 
+                            <Form.Control
+                                placeholder="1234 Main St"
                                 name="adress"
                                 value={props.registerInfo.adress}
                                 onChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="formGridCountry">
-                            <Country 
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
+                            <Country
                                 value={props.registerInfo.country}
                                 handleChange={props.handleChange}
                             />
                         </Form.Group>
+                    </Col>
 
-                        <Form.Group as={Col} controlId="formGridState">
+                    <Col lg="4" md={6} s={12}>
+                        <Form.Group>
                             <Form.Label>Career</Form.Label>
-                            <Form.Control 
-                                as="select" 
+                            <Form.Control
+                                as="select"
                                 name="career"
                                 value={props.registerInfo.career}
                                 onChange={props.handleChange}
@@ -215,20 +243,20 @@ function RegisterView(props) {
                                 <option>Marketing</option>
                                 <option>Designer</option>
                                 <option>Medicine</option>
-                                
+
                             </Form.Control>
                         </Form.Group>
-                    </Form.Row>
+                    </Col>
+                </Row>
 
-                    <Button variant="secondary" type="submit">
-                        Register
+                <Button variant="secondary" type="submit">
+                    Register
                     </Button>{' '}
-                    <Button onClick={props.toggleEmployer} variant="success">
-                        Employer?
-                    </Button>
-                </Form>
-            </Container>
-        </div>
+                <Button onClick={props.toggleEmployer} variant="success">
+                    Employer?
+                </Button>
+            </Form>
+        </Container>
     );
 }
 

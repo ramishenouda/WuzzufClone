@@ -15,7 +15,6 @@ class Register extends Component {
         companyPhone:'',
         companyName:'',
         companyWebsite:'',
-        employer: false,
     }
 
     handleChange = (event) => {

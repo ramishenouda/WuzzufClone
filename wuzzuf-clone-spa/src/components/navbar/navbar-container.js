@@ -7,15 +7,9 @@ class Navbar extends Component{
     }
 
     render() {
-        if(!this.state.authenticated) {
-            return (
-                <MainNavbarView toggleLogin={this.toggleLogin} />
-            );
-        } else {
-            return (
-                <LoggedInNavbarView toggleLogin={this.toggleLogin} />
-            )
-        }
+        return(
+            <LoggedInNavbarView />
+        );
     }
 }
 export default Navbar

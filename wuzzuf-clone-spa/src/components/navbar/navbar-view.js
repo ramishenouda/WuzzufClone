@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Navbar, Nav, Dropdown, DropdownButton } from 'react-bootstrap';
+import { Container, Navbar, Nav, DropdownButton } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import './navbar-style.css'
@@ -28,16 +28,16 @@ function LoggedInNavbarView() {
         <>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">WUZUUF</Navbar.Brand>
+                    <Link to="/"> <Navbar.Brand>WUZZUF</Navbar.Brand> </Link>
                     <Nav className="mr-auto">
-                        <Nav.Link href="#explore">EXPLORE</Nav.Link>
-                        <Nav.Link href="#saved">SAVED</Nav.Link>
-                        <Nav.Link href="#applications">APPLICATIONS</Nav.Link>
-                    </Nav>
-                    <Nav inline>
+                        <Link to="/explore" className="link">EXPLORE</Link>
+                        <Link to="/saved" className="link">SAVED</Link>
+                        <Link to="/applications" className="link">APPLICATIONS</Link>
                         <DropdownButton id="dropdown-basic-button" title="Profile" variant="info">
-                            <Dropdown.Item href="#/action-1">Edit info</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+                            <Link to="/editInfo" className="DropdownItem">Edit info</Link>
+                            <Link to="/login" className="DropdownItem">Logout</Link>
+                            {/* <Dropdown.Item href="#/action-1">Edit info</Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Logout</Dropdown.Item> */}
                         </DropdownButton>
                     </Nav>
                 </Container>
