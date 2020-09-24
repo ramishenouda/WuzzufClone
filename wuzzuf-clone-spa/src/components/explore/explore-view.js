@@ -1,13 +1,14 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
+import { MdAddBox } from "react-icons/md";
 import './explore-style.css';
 
-function Explore() {
-    return(
-        <Container>
-            <h1 className="text-center mt-5"> Explore your jobs </h1>
-        </Container>
+function Explore(props) {
+    return (
+        <div className="post">
+            {props.state.employer ? <Button variant="success" onClick={props.postWindow}> Post <MdAddBox className="pl-1 iconPlus" /> </Button> : ''}
+        </div>
     );
 }
 

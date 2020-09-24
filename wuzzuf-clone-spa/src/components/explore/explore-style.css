@@ -1,0 +1,11 @@
+.add {
+    background-color: green;
+}
+.iconPlus {
+    font-size: 30px;
+    color: white
+}
+
+.card .btn {
+    padding: 3px 15px
+}

@@ -1,16 +1,52 @@
+/*start of navbar*/
+.nav .container {
+    width: auto;
+}
+.navbar li{
+    display: inline-block;
+    list-style: none;
+}
+.navbar ul{
+    padding-inline-start: 0;
+}
+.upper-nav li {
+    margin-top: 15px;
+}
+.lower-nav {
+    text-align: center !important;
+    padding: 0 !important;
+}
+.green { 
+    color: green !important;
+    font-weight: bold;
+}
+.red { 
+    color: rgb(197, 5, 5) !important;
+    font-weight: bold;
+}
+.navbar-dark .navbar-brand { cursor: pointer;}
+.navbar {
+    min-width: fit-content;
+    width: 100%;
+    background-color: #343a40 ;
+}
+/*End of navbar*/
+
+/*Start of links*/
 .link {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     padding-right: 0.5rem;
     padding-left: 0.5rem;
-    display: block;
     padding: 0.5rem 1rem;
 }
 .link:hover {
     color: rgb(231, 231, 231);
     text-decoration: none;
 }
+/*End of links*/
 
+/*Start of Dropdown*/
 .DropdownItem {
     display: block;
     width: 100%;
@@ -34,3 +70,4 @@
     text-decoration: none;
     background-color: #007bff;
 }
+/*End of Dropdown*/

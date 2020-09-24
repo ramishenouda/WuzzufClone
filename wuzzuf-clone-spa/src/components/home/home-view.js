@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './home-style.css'
 
 function HomeView (props) {
