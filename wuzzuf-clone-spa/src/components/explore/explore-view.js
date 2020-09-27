@@ -7,7 +7,7 @@ import './explore-style.css';
 function Explore(props) {
     return (
         <div className="post">
-            {props.state.employer ? <Button variant="success" onClick={props.postWindow}> Post <MdAddBox className="pl-1 iconPlus" /> </Button> : ''}
+            {props.state.employer ? <Button variant="success"> Post <MdAddBox className="pl-1 iconPlus" /> </Button> : ''}
         </div>
     );
 }

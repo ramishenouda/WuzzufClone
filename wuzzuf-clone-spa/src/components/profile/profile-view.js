@@ -208,6 +208,16 @@ function Profile(props) {
                                 </Col>
                             </Row>
                         </div>
+                        <div className="about">
+                            <label>Enter value : </label>
+                            <textarea
+                                col="50"
+                                row="50"
+                                name="about"
+                                value={props.about}
+                                onChange={props.handleChange}
+                            />
+                        </div>
                         <Button variant="primary" className="mt-5 mb-3 center" >Save Changes</Button>
                     </Col>
                 </Row>

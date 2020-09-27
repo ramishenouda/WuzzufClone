@@ -11,7 +11,12 @@
     border-left: 3px solid #1c1c1c;
     background-color: rgba(250, 249, 249, 0.965);
 }
-
+.about textarea{
+    margin: 13px;
+    height: 124px;
+    width: 509px;
+    resize: none;
+}
 @media (max-width:600px){
     .profile .left { margin-left: 5px;}
     .profile .right{

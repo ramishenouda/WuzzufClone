@@ -16,6 +16,7 @@ class Profile extends Component {
         companyPhone:'01223455789',
         companyName:'M7ame7o ll parmga',
         companyWebsite:'www.m7ame7oWebsite.com',
+        about: '',
         employer: true
     }
 

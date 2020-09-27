@@ -7,7 +7,7 @@ import ExploreView from './explore-view';
 
 class Explore extends Component {
     state = {
-        employer: false,
+        employer: true,
         data: [
             {
                 header: "Graphic Designer - Internship",
