@@ -7,6 +7,7 @@ import Login from './components/login/login-container';
 import Register from './components/register/register-container';
 import Profile from './components/profile/profile-container';
 import Explore from './components/explore/explore-container';
+import Post from './components/post-a-Job/post-container'
 
 import './style.css'
 
@@ -21,6 +22,7 @@ class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/editInfo" component={Profile} />
                     <Route exact path="/explore" component={Explore} />
+                    <Route exact path="/post" component={Post} />
                 </Switch>
             </BrowserRouter>
         );
