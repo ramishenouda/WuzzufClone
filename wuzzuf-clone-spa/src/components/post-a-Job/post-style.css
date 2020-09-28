@@ -1,0 +1,6 @@
+textarea.form-control{
+    resize: none;
+}
+.post .btn{
+    padding: 4px 17px;
+}
