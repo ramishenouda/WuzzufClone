@@ -1,0 +1,11 @@
+.content-card {
+    margin-top: 14px;
+    border: 1px solid #d0d0d0;
+    padding: 20px 25px;
+    background-color: rgb(243, 239, 239);
+    
+}
+.content-card img{
+    max-height: 80px;
+    max-width: 160px;
+}
