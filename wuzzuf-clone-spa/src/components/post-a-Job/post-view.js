@@ -38,8 +38,9 @@ function Post(props) {
                                 className="mb-3"
                                 name="jobType"
                                 placeholder="Job Type"
-                                options={props.options}
+                                options={props.options2}
                                 components={props.animatedComponents}
+                                onChange={props.handleSelectChange}
                                 isMulti
                             />
                         </Col>
@@ -51,6 +52,7 @@ function Post(props) {
                                 placeholder="Job Roles"
                                 options={props.options}
                                 components={props.animatedComponents}
+                                onChange={props.handleSelectChange}
                                 isMulti
                             />
                         </Col>
@@ -62,6 +64,7 @@ function Post(props) {
                                 placeholder="Career Level"
                                 options={props.options}
                                 components={props.animatedComponents}
+                                onChange={props.handleSelectChange}
                                 isMulti
                             />
                         </Col>
@@ -73,6 +76,7 @@ function Post(props) {
                                 placeholder="keyWords"
                                 options={props.options}
                                 components={props.animatedComponents}
+                                onChange={props.handleSelectChange}
                                 isMulti
                             />
                         </Col>
