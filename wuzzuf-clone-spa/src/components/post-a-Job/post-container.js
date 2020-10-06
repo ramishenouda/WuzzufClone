@@ -13,6 +13,7 @@ class Post extends Component {
         keyWords: [],
         jobRequirements: '',
         about: '',
+        temp:''
     }
 
     handleChange = (event) => {
@@ -22,36 +23,33 @@ class Post extends Component {
 
     handleSelectChange = (event) => {
         let Select = []
-        if(event === null){}
+        if(event === null || event.length === 0){
+            setTimeout(() => {
+                if(this.state.temp === 'jobType'){
+                    this.setState({jobType:[]})
+                }else if(this.state.temp === 'jobRoles'){
+                    this.setState({jobRoles:[]})
+                }else if(this.state.temp === 'careerLevel'){
+                    this.setState({careerLevel:[]})
+                }else if(this.state.temp === 'keyWords'){
+                    this.setState({keyWords:[]})
+                }
+              }, 1000);
+        }
         else if (event[0]) {
             Select= [];
             const name = event[0].name
             for (let index = 0; index < event.length; index++) {
                 Select.push(event[index].value)
             }
-            console.log(...Select);
             return this.setState({[name]: Select});
         }
     }
 
-    /*
-    handleSelectChange = (event) => {
-        let careerLevel = this.state.careerLevel;
-        careerLevel= [];
-        
-        if(event === null || event.length === 0){}
-        else if(event.length < 2){
-            careerLevel.push(event[0].value)
-        }
-        else if (event[0]) {
-            careerLevel= [];
-            for (let index = 0; index < event.length; index++) {
-                careerLevel.push(event[index].value)
-            }
-        }
-        console.log(...careerLevel);
+    openMenuFoucs = (name) =>{
+        this.setState({temp: name})
     }
-    */
+
 
     render() {
         const options = [
@@ -73,6 +71,7 @@ class Post extends Component {
                 options={options}
                 options2={options2}
                 handleSelectChange={this.handleSelectChange}
+                openMenuFocus={this.openMenuFoucs}
             />
         )
     }
