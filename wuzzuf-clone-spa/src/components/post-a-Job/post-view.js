@@ -40,6 +40,7 @@ function Post(props) {
                                 placeholder="Job Type"
                                 options={props.options2}
                                 components={props.animatedComponents}
+                                onFocus={() =>props.openMenuFocus('jobType')}
                                 onChange={props.handleSelectChange}
                                 isMulti
                             />
@@ -64,6 +65,7 @@ function Post(props) {
                                 placeholder="Career Level"
                                 options={props.options}
                                 components={props.animatedComponents}
+                                onFocus={() =>props.openMenuFocus('careerLevel')}
                                 onChange={props.handleSelectChange}
                                 isMulti
                             />
@@ -78,6 +80,7 @@ function Post(props) {
                                 components={props.animatedComponents}
                                 onChange={props.handleSelectChange}
                                 isMulti
+
                             />
                         </Col>
 
