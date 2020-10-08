@@ -34,7 +34,7 @@ class Post extends Component {
                 }else if(this.state.temp === 'keyWords'){
                     this.setState({keyWords:[]})
                 }
-              }, 1000);
+              }, 200);
         }
         else if (event[0]) {
             Select= [];
