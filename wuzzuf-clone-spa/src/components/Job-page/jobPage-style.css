@@ -7,5 +7,61 @@
 }
 .content-card img{
     max-height: 80px;
-    max-width: 160px;
+    max-width: 136px;
 }
+
+.job-page .companyName{
+    font-size: 1.15em;
+    color: #217fb6;
+    margin-bottom: 4px;
+}
+.job-page .verified{
+    color: blue;
+}
+
+/*Start of applyInfo*/
+.job-page .applyInfo{
+    border-top: 2px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-top: 12px;
+}
+.job-page .applyInfo .btn-Apply{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #3794ce;
+}
+.job-page .applyInfo .borderR{
+    border-right: 2px solid rgb(255, 255, 255);
+}
+/*End of applyInfo*/
+
+/*Start of applicants*/
+.job-page .applyInfo .applicants{
+    line-height: 1.2;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.job-page .applyInfo .applicants .num{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*End of applicants*/
+
+/*Start of stat*/
+.job-page .applyInfo .stat{
+    display: inline-block;
+    margin: 0 6px;
+    text-align: center;
+}
+.job-page .applyInfo .stat .applicants-num{
+    font-size: 1.2em;
+    line-height: 2;
+}
+.job-page .applyInfo .stat .applicants-desc{
+    font-size: .8em;
+    font-weight: lighter;
+    line-height: 1;
+}
+/*End of stat*/
+
