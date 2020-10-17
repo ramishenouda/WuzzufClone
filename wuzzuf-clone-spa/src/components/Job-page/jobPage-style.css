@@ -66,3 +66,29 @@
 }
 /*End of stat*/
 
+/*Start of Responsive*/
+@media (max-width: 992px) {
+    .content-card img,
+    .job-page .applyInfo .btn-Apply{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .content-card .title h3{
+        font-size: 20px;
+    }
+    .job-page .applyInfo .borderR{
+        border-right: 0px
+    }
+    .job-page .applyInfo .btn-Apply{
+        padding: 0.375rem 70px;
+    }
+    .job-page .applyInfo .applicants .num{
+        font-size: 30px;
+    }
+    .job-page .applyInfo .stats{
+        margin-left: 20px;
+    }
+}
+/*End of Responsive*/
