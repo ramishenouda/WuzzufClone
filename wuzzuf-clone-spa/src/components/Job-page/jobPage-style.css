@@ -66,6 +66,56 @@
 }
 /*End of stat*/
 
+/*Start of job-sumamry*/
+.job-page .job-summary,
+.job-page .job-roles{
+    margin-bottom: 20px;
+}
+.job-page .job-summary .last{
+    border-right: 0px solid rgb(255, 255, 255) !important
+}
+.job-page .job-summary .summary-top{
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.job-page .job-summary .summary-bottom{
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.job-page .job-summary .requirement{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.job-page .job-summary .summary-top p,
+.job-page .job-summary .summary-bottom p,
+.job-page .job-roles p,
+.job-page .job-about p{
+    margin-bottom: 5px;
+}
+.job-page .job-summary .requirement-content{
+    font-size: 0.9em;
+}
+/*End of job-sumamry*/
+
+/*Start of job Roles*/
+.job-page .job-roles .requirement{
+    font-weight: bold;
+}
+.job-page .job-roles .requirement-content{
+    margin-left: 10px;
+}
+/*End of job Roles*/
+
+/*Start of job About*/
+.job-page .job-about .requirement{
+    font-size: 20px;
+    font-weight: bold;
+}
+.job-page .job-about .requirement-content{
+    margin-left: 10px;
+}
+/*End of job About*/
+
 /*Start of Responsive*/
 @media (max-width: 992px) {
     .content-card img,
@@ -90,5 +140,30 @@
     .job-page .applyInfo .stats{
         margin-left: 20px;
     }
+
+    .job-page .job-summary .requirement{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px){ 
+    /*Start of job-sumamry*/
+    .job-page .job-summary .summary-top,
+    .job-page .job-summary .summary-bottom{
+        border-right: 0px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+    }
+    .job-page .job-summary .bottom .last{
+        border-bottom: 0px solid rgb(255, 255, 255);
+    }
+    .job-page .job-summary .summary-top,
+    .job-page .job-summary .summary-bottom{
+        padding-bottom: 10px;
+    }
+    .job-page .job-summary .requirement{
+        font-size: 16px;
+    }
+    /*End of job-sumamry*/
+
 }
 /*End of Responsive*/
