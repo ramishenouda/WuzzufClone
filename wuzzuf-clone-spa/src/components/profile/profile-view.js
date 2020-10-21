@@ -17,7 +17,7 @@ function Profile(props) {
                                 width={100}
                                 height={100}
                                 className="mr-3"
-                                src="https://scontent.fcai21-1.fna.fbcdn.net/v/t1.0-9/90018423_2598665993743519_8099621696719290368_o.jpg?_nc_cat=111&_nc_sid=09cbfe&_nc_ohc=FCaJJGq63BsAX86ukWC&_nc_ht=scontent.fcai21-1.fna&oh=3e71e91cd39985b327b9e6ec01c35697&oe=5F8A0846"
+                                src="https://www.facebook.com/photo?fbid=2776912992585484&set=a.1879410215669104"
                                 alt="Profile pic"
                                 roundedCircle
                             />

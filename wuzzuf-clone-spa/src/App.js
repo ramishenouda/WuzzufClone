@@ -7,7 +7,8 @@ import Login from './components/login/login-container';
 import Register from './components/register/register-container';
 import Profile from './components/profile/profile-container';
 import Explore from './components/explore/explore-container';
-import Post from './components/post-a-Job/post-container'
+import Post from './components/post-a-Job/post-container';
+import JobPage from './components/Job-page/jobPage-container';
 
 import './style.css'
 
@@ -16,6 +17,7 @@ class App extends Component {
         return(
             <BrowserRouter>
                 <Navbar />
+                <JobPage />
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/login" component={Login} />

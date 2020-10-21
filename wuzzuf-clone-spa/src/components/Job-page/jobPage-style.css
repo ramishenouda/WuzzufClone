@@ -1,0 +1,192 @@
+.content-card {
+    margin-top: 14px;
+    border: 1px solid #d0d0d0;
+    padding: 20px 25px;
+    background-color: rgb(243, 239, 239);
+    
+}
+.content-card img{
+    max-height: 80px;
+    max-width: 136px;
+}
+
+.job-page .companyName{
+    font-size: 1.15em;
+    color: #217fb6;
+    margin-bottom: 4px;
+}
+.job-page .verified{
+    color: blue;
+}
+
+/*Start of applyInfo*/
+.job-page .applyInfo{
+    border-top: 2px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    padding-top: 12px;
+}
+.job-page .applyInfo .btn-Apply{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+    background-color: #3794ce;
+}
+.job-page .applyInfo .borderR{
+    border-right: 2px solid rgb(255, 255, 255);
+}
+/*End of applyInfo*/
+
+/*Start of applicants*/
+.job-page .applyInfo .applicants{
+    line-height: 1.2;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.job-page .applyInfo .applicants .num{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*End of applicants*/
+
+/*Start of stat*/
+.job-page .applyInfo .stat{
+    display: inline-block;
+    margin: 0 6px;
+    text-align: center;
+}
+.job-page .applyInfo .stat .applicants-num{
+    font-size: 1.2em;
+    line-height: 2;
+}
+.job-page .applyInfo .stat .applicants-desc{
+    font-size: .8em;
+    font-weight: lighter;
+    line-height: 1;
+}
+/*End of stat*/
+
+/*Start of job-sumamry*/
+.job-page .job-summary,
+.job-page .job-roles{
+    margin-bottom: 20px;
+}
+.job-page .job-summary .last{
+    border-right: 0px solid rgb(255, 255, 255) !important
+}
+.job-page .job-summary .summary-top{
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.job-page .job-summary .summary-bottom{
+    border-right: 2px solid rgb(255, 255, 255);
+}
+
+.job-page .job-summary .requirement{
+    padding-top: 10px;
+    font-weight: bold;
+}
+.job-page .job-summary .summary-top p,
+.job-page .job-summary .summary-bottom p,
+.job-page .job-roles p,
+.job-page .job-about p{
+    margin-bottom: 5px;
+}
+.job-page .job-summary .requirement-content{
+    font-size: 0.9em;
+    margin-bottom: 10px !important;
+}
+/*End of job-sumamry*/
+
+/*Start of job Roles*/
+.job-page .job-roles .requirement{
+    font-weight: bold;
+}
+.job-page .job-roles .requirement-content{
+    margin-left: 10px;
+}
+/*End of job Roles*/
+
+/*Start of job About*/
+.job-page .job-about .requirement{
+    font-size: 20px;
+    font-weight: bold;
+}
+.job-page .job-about .requirement-content{
+    margin-left: 10px;
+}
+/*End of job About*/
+
+/*Start of Job Requirements*/
+.job-page .job-requirements .card-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+/*End of Job Requirements*/
+
+/*Start of Job Keywords*/
+.job-page .job-keywords{
+    margin-bottom: 10px;
+}
+.job-page .job-keywords .card-title{
+    font-size: 15px;
+    font-weight: 700;
+}
+.job-page .job-keywords .keywords-content .keyword{
+    border-right: 2px solid rgb(255, 255, 255);
+    margin-bottom: 8px;
+}
+/*End of Job Keywords*/
+
+
+/*Start of Responsive*/
+@media (max-width: 992px) {
+    .content-card img,
+    .job-page .applyInfo .btn-Apply{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .content-card .title h3{
+        font-size: 20px;
+    }
+    .job-page .applyInfo .borderR{
+        border-right: 0px
+    }
+    .job-page .applyInfo .btn-Apply{
+        padding: 0.375rem 70px;
+    }
+    .job-page .applyInfo .applicants .num{
+        font-size: 30px;
+    }
+    .job-page .applyInfo .stats{
+        margin-left: 20px;
+    }
+
+    .job-page .job-summary .requirement{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px){ 
+    /*Start of job-sumamry*/
+    .job-page .job-summary .summary-top,
+    .job-page .job-summary .summary-bottom{
+        border-right: 0px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+    }
+    .job-page .job-summary .bottom .last{
+        border-bottom: 0px solid rgb(255, 255, 255);
+    }
+    .job-page .job-summary .summary-top,
+    .job-page .job-summary .summary-bottom{
+        padding-bottom: 10px;
+    }
+    .job-page .job-summary .requirement{
+        font-size: 16px;
+    }
+    /*End of job-sumamry*/
+
+}
+/*End of Responsive*/
