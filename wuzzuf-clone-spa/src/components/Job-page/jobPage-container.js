@@ -23,6 +23,25 @@ class JobPage extends Component {
         Initiate storyboards to present Ideas before implementation.
         Design logos, backdrops, catalogs, and other designing material.
         Create graphic design work for multiple channels which include, digital and social media.`,
+        jobRequirements: `Fresh graduate up to 4 years Experience.
+        High level of spirit and passion for work.
+        Excellent Knowledge of Adobe Photoshop, Adobe Illustrator.
+        Good knowledge of printing, media, and web design.
+        Adobe InDesign is a plus.
+        Communication & Presentation Skills.
+        Strong attention to details, teamwork, time management and crew.
+        Strong sense of aesthetics and design elements.
+        Good in English.`,
+        keywords:['Fine Arts',
+            'Adobe Photoshop',
+            'Adobe Illustrator',
+            'Adobe Indesign',
+            'Design',
+            'Web Design',
+            'Online Media',
+            'Graphic Design',
+            'GIFs',
+            'Campaigns'],
         screenWidth: window.innerWidth,
     }
 

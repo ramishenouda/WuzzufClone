@@ -61,11 +61,11 @@ function JobPage(props) {
                             <Row>
                                 <Col md={4} xs={12} className="summary-top">
                                     <p className="requirement">Experience Needed:</p>
-                                    <p className="requirementA-content"> {state.experienceNeeded} </p>
+                                    <p className="requirement-content"> {state.experienceNeeded} </p>
                                 </Col>
                                 <Col md={4} xs={12} className="summary-top">
                                     <p className="requirement">Career Level:</p>
-                                    <p className="requirementA-content"> {state.careerLevel} </p>
+                                    <p className="requirement-content"> {state.careerLevel} </p>
                                 </Col>
                                 <Col md={4} xs={12} className=" summary-top last">
                                     <p className="requirement">Job Type:</p>
@@ -97,14 +97,35 @@ function JobPage(props) {
                             <p className="requirement-content"> {state.jobAbout} </p>
                         </div>
                     </div>
+
+                    <div className="content-card">
+                        <div className="job-requirements">
+                            <div className="card-title">
+                                Job Requirements
+                            </div>
+                            <p className="requirement-content">{state.jobRequirements}</p>
+                        </div>
+                        
+                        <div className="job-keywords">
+                            <div className="card-title">
+                                Keywords:
+                            </div>
+                            <Row className="keywords-content">
+                                {
+                                    state.keywords.map( keyword => (
+                                        <Col key={keyword.toString()} lg={3} md={4} xs={6} className="keyword">
+                                            {keyword}
+                                        </Col>
+                                    ))
+                                }
+                            </Row>
+                        </div>
+                    </div>
                 </Col>
 
                 <Col md={3} xs={12}>
-                    <h1>Hello, how are you! hehehe</h1>
+                    <h1>Ads Coming soon...</h1>
                 </Col>
-                {
-                    console.log(state.screenWidth)
-                }
             </Row>
         </Container>
     );
